@@ -1,0 +1,21 @@
+@import './vars';
+
+.error-view {
+    display: block;
+    .title {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .link {
+        .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            @extend %btnStandart;
+            &:hover {
+                @extend %btnStandartHover;
+            }
+        }
+    }
+}

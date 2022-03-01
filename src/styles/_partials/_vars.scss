@@ -1,0 +1,21 @@
+//breakepoints:
+$mobile: 320px;
+$desktop: 560px;
+
+//colors:
+$accentColor: #af3f3f;
+$titleColor: #292929;
+$backgroundColor: #ffffff;
+$backgroundColorSecondary: #e8e8e8;
+$border: 1px solid rgba(0, 0, 0, 0.3);
+
+//templates:
+%btnStandart {
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+%btnStandartHover {
+    box-shadow: 1px 2px 3px rgb(0 0 0 / 50%);
+    font-weight: 600;
+}
