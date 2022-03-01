@@ -9,16 +9,16 @@ import './styles/main.scss';
 function App() {
     return (
         <>
-            <AppBar />
-            <Container>
-                <BrowserRouter>
+            <BrowserRouter>
+                <AppBar />
+                <Container>
                     <Routes>
                         <Route path="/" element={<HomeView />} />
                         <Route exact path="/add" element={<AddProductView />} />
                         <Route path="*" element={<ErrorView />} />
                     </Routes>
-                </BrowserRouter>
-            </Container>
+                </Container>
+            </BrowserRouter>
         </>
     );
 }
