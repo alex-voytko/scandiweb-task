@@ -14,8 +14,11 @@
         align-items: center;
         justify-content: center;
     }
-    img {
-        width: 161.25px;
-        height: 36.5px;
+    .logo-container {
+        width: 160px;
+        height: 40px;
+        background-image: url('../../images/logo.svg');
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

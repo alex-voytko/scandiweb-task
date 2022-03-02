@@ -1,0 +1,37 @@
+@import './vars';
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    &-item {
+        position: relative;
+        width: 200px;
+        height: 400px;
+        outline: 1px solid $border;
+        margin-right: 30px;
+        .img-container {
+            width: inherit;
+            height: 300;
+            position: absolute;
+            z-index: 2;
+            background-size: cover;
+
+            .img-fill {
+                position: absolute;
+                width: inherit;
+                height: 300;
+                background-color: rgba(191, 18, 18, 0.4);
+                z-index: 5;
+            }
+            p {
+                position: absolute;
+                z-index: 1;
+            }
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}

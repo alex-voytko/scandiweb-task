@@ -1,5 +1,5 @@
 import ViewWrapper from '../components/ViewWrapper';
-// import { Link } from 'react-router-dom';
+import ProductList from '../components/ProductList';
 
 function HomeView() {
     return (
@@ -11,6 +11,7 @@ function HomeView() {
                 firstBtnLink={'/add'}
                 secondBtnLink={'#'}
             />
+            <ProductList />
         </>
     );
 }
