@@ -3,11 +3,11 @@ $mobile: 320px;
 $desktop: 560px;
 
 //colors:
-$accentColor: #e04e4f;
+$accentColor: rgb(244, 78, 79);
 $titleColor: #292929;
 $backgroundColor: #ffffff;
 $backgroundColorSecondary: #e8e8e8;
-$border: 1px solid rgba(0, 0, 0, 0.3);
+$border: 1px solid rgba(53, 53, 53, 0.3);
 
 //templates:
 %btnStandart {
@@ -15,7 +15,12 @@ $border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     text-transform: uppercase;
 }
-%btnStandartHover {
+%standartHover {
     box-shadow: 1px 2px 3px rgb(224 78 79 / 50%);
-    color: $accentColor;
+}
+
+//mixins:
+@mixin standartItemShadow($r, $g, $b) {
+    box-shadow: 0px 1px 1px rgba($r, $g, $b, 0.12),
+        0px 4px 4px rgba($r, $g, $b, 0.06), 1px 4px 6px rgba($r, $g, $b, 0.16);
 }

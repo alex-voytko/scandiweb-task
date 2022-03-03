@@ -1,10 +1,11 @@
-@import './vars';
+@import "./vars";
 
 .view-wrapper {
     display: flex;
     padding: 10px 0;
     justify-content: space-between;
     border-bottom: $border;
+    margin-bottom: 30px;
     .btn-container {
         display: flex;
         .link {
@@ -12,7 +13,8 @@
             .btn {
                 @extend %btnStandart;
                 &:hover {
-                    @extend %btnStandartHover;
+                    @extend %standartHover;
+                    color: $accentColor;
                 }
             }
             &:first-child {

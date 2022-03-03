@@ -1,4 +1,4 @@
-@import './vars';
+@import "./vars";
 
 *,
 *::before,
@@ -23,11 +23,12 @@ dd {
 }
 h2,
 a,
-button {
+button,
+label {
     color: $titleColor;
 }
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;

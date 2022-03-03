@@ -1,4 +1,5 @@
 import products from '../db.json';
+import sliceTitle from '../helpers/sliceTitle';
 
 function ProductList() {
     return (
@@ -10,10 +11,14 @@ function ProductList() {
                         <p>{product.sku}</p>
                         <img src={product.url} alt={product.name} />
                     </div>
-                    <div>
-                        <h3>{product.name}</h3>
-                        <p>Category: {product.type}</p>
-                        <p>{`Price: $${product.price}`}</p>
+                    <div className="content-container">
+                        <h3 className="title">{sliceTitle(product.name)}</h3>
+                        <p>
+                            Category: <span>{product.type}</span>
+                        </p>
+                        <p>
+                            Price: <span>{'$' + product.price}</span>
+                        </p>
                     </div>
                 </li>
             ))}
