@@ -1,3 +1,5 @@
+@import "./vars";
+
 .product-form {
     display: flex;
     label {
@@ -6,39 +8,41 @@
         font-size: 16px;
     }
     input {
-        width: 350px;
-        height: 24px;
-        display: block;
+        @include standartInput(24px);
         margin-bottom: 20px;
-        border: $border;
-        border-radius: 3px;
-    }
-    .required-input-container {
-        display: flex;
-        margin-right: 70px;
-        .label-container {
-            width: 60px;
-            margin-right: 10px;
+        &:focus {
+            border: 2px solid $accentColorAccept;
         }
     }
-    .category-container {
-        .label-container {
-            width: 88px;
-            margin-right: 10px;
-        }
-        .category-flex-wrapper {
+    .label-container {
+        width: 88px;
+        margin-right: 10px;
+    }
+    .block-container {
+        .required-input-container {
             display: flex;
-            .select-input {
-                height: 24px;
-                width: 350px;
-                height: 24px;
-                border: $border;
-                border-radius: 3px;
-                margin-bottom: 20px;
+            margin-right: 70px;
+        }
+        .select-input {
+            @include standartInput(24px);
+            margin-bottom: 20px;
+        }
+        .category-container {
+            .render-category-container {
+                display: flex;
             }
         }
-        .render-category-container {
+    }
+    .second-block-container {
+        .description-container {
             display: flex;
+        }
+        textarea {
+            @include standartInput(112px);
+            margin-bottom: 20px;
+            &:focus {
+                border: 2px solid $accentColorAccept;
+            }
         }
     }
 }

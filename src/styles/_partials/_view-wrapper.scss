@@ -12,9 +12,13 @@
             display: block;
             .btn {
                 @extend %btnStandart;
-                &:hover {
-                    @extend %standartHover;
-                    color: $accentColor;
+                &.blue:hover {
+                    @include standartBtnShadow(54, 110, 252);
+                    color: $accentColorAccept;
+                }
+                &.red:hover {
+                    @include standartBtnShadow(224, 79, 78);
+                    color: $accentColorCancel;
                 }
             }
             &:first-child {

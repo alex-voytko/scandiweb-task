@@ -3,10 +3,11 @@ $mobile: 320px;
 $desktop: 560px;
 
 //colors:
-$accentColor: rgb(244, 78, 79);
+$accentColorCancel: rgb(224, 78, 79);
+$accentColorAccept: rgb(71, 176, 247);
 $titleColor: #292929;
 $backgroundColor: #ffffff;
-$backgroundColorSecondary: #e8e8e8;
+$backgroundColorSecondary: rgb(213, 238, 255);
 $border: 1px solid rgba(53, 53, 53, 0.3);
 
 //templates:
@@ -15,12 +16,19 @@ $border: 1px solid rgba(53, 53, 53, 0.3);
     border-radius: 5px;
     text-transform: uppercase;
 }
-%standartHover {
-    box-shadow: 1px 2px 3px rgb(224 78 79 / 50%);
-}
 
 //mixins:
+@mixin standartBtnShadow($r, $g, $b) {
+    box-shadow: 1px 2px 3px rgba($r, $g, $b, 0.4);
+}
 @mixin standartItemShadow($r, $g, $b) {
     box-shadow: 0px 1px 1px rgba($r, $g, $b, 0.12),
         0px 4px 4px rgba($r, $g, $b, 0.06), 1px 4px 6px rgba($r, $g, $b, 0.16);
+}
+@mixin standartInput($height) {
+    width: 350px;
+    height: $height;
+    display: block;
+    border: $border;
+    border-radius: 3px;
 }

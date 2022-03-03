@@ -1,4 +1,4 @@
-@import './vars';
+@import "./vars";
 
 .error-view {
     display: block;
@@ -14,8 +14,8 @@
             margin-top: 30px;
             @extend %btnStandart;
             &:hover {
-                @extend %standartHover;
-                color: $accentColor;
+                @include standartBtnShadow(54, 110, 252);
+                color: $accentColorAccept;
             }
         }
     }

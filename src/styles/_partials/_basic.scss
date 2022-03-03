@@ -53,6 +53,15 @@ button {
 li {
     list-style: none;
 }
+input,
+textarea {
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+    box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+    &:focus {
+        outline: none;
+    }
+}
 a {
     text-decoration: none;
 }
