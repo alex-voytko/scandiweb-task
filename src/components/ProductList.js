@@ -1,26 +1,25 @@
-import products from '../db.json';
-import sliceTitle from '../helpers/sliceTitle';
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import ProductCard from "./ProductCard";
 
 function ProductList() {
+    const [products, setProducts] = useState([]);
+    const getItems = useSelector(state => state.products.items);
+
+    useEffect(() => {
+        setProducts([...getItems]);
+    }, []);
     return (
         <ul className="product-list">
             {products.map(product => (
-                <li className="product-list-item" key={product.id}>
-                    <div className="img-container">
-                        <div className="img-fill"></div>
-                        <p>{product.sku}</p>
-                        <img src={product.url} alt={product.name} />
-                    </div>
-                    <div className="content-container">
-                        <h3 className="title">{sliceTitle(product.name)}</h3>
-                        <p>
-                            Category: <span>{product.type}</span>
-                        </p>
-                        <p>
-                            Price: <span>{'$' + product.price}</span>
-                        </p>
-                    </div>
-                </li>
+                <ProductCard
+                    key={product.id}
+                    sku={product.sku}
+                    url={product.url}
+                    name={product.name}
+                    type={product.type}
+                    price={product.price}
+                />
             ))}
         </ul>
     );
