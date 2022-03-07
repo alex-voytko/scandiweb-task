@@ -7,18 +7,36 @@ const productsSlice = createSlice({
         items: [...productList],
     },
     reducers: {
-        addProduct(state, action) {
-            state.items = [action.payload, ...productList];
-            return action.payload;
+        fetchProducts(state) {
+            return state.items;
         },
-        removeProduct(state, action) {
-            state.items = state.items.filter(
-                item => item.id !== action.payload,
-            );
+        addProduct(state, action) {
+            state.items = [action.payload, ...state.items];
+        },
+        resetAllToggles(state) {
+            const newArr = [];
+            state.items.forEach(item => {
+                newArr.push({ ...item, isMarked: false });
+            });
+            state.items = newArr;
+        },
+        onToggleToRemove(state, { payload }) {
+            console.log(payload);
+            const i = state.items.findIndex(item => item.id === payload.id);
+            state.items[i].isMarked = payload.checked;
+        },
+        removeProducts(state, { payload }) {
+            state.items = state.items.filter(item => item.isMarked === payload);
         },
     },
 });
 
-export const { addProduct, removeProduct } = productsSlice.actions;
+export const {
+    addProduct,
+    removeProducts,
+    onToggleToRemove,
+    resetAllToggles,
+    fetchProducts,
+} = productsSlice.actions;
 
 export default productsSlice.reducer;

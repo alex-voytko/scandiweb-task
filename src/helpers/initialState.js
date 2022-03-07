@@ -12,6 +12,7 @@ const initialState = {
     weight: 0,
     author: "",
     type: furniture,
+    isMarked: false,
     url: "",
 };
 

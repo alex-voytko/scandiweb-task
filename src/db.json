@@ -3,12 +3,13 @@
         "id": "124v12v12",
         "name": "Sofa Luna",
         "sku": "fur-001",
-        "price": 325,
+        "price": 399,
         "type": "Furniture",
         "description": "Luna beige triple sofa is a comfortable folding product from a Ukrainian manufacturer, the frame of which is made of wood. The upholstery is pleasant to the touch and durable fabric of beige Alaska 04 silver ash.",
         "height": 87,
         "depth": 87,
         "width": 192,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/21df600aeffb9ab338291a7150a3f3b4.jpg"
     },
     {
@@ -21,6 +22,7 @@
         "height": 76,
         "depth": 80,
         "width": 140,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/0a46267da58a859695a1cf4b95d21eb9.jpg"
     },
     {
@@ -33,6 +35,7 @@
         "height": 79,
         "depth": 43,
         "width": 44,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/f43ea8a07e169527878351c0b71ca7a0.jpg"
     },
     {
@@ -45,6 +48,7 @@
         "height": 95,
         "depth": 210,
         "width": 202,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/6a45b8710d8a9e6e28163af3f851708a.jpg"
     },
     {
@@ -55,6 +59,7 @@
         "type": "DVD/Flash",
         "description": "HP CD-R 700MB 52X discs per pack without spindle 50 pcs. Designed for one-time recording.",
         "size": 0.7,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/89662d06f15a4bbc824c564543e34518.jpg"
     },
     {
@@ -65,6 +70,7 @@
         "type": "DVD/Flash",
         "description": "High-speed USB 3.0 performance of up to 150MB/s(1) [(1) Write to drive up to 15x faster than standard USB 2.0 drives (4MB/s); varies by drive capacity. Up to 150MB/s read speed. USB 3.0 port required. Based on internal testing; performance may be lower depending on host device, usage conditions, and other factors; 1MB=1,000,000 bytes]",
         "size": 128,
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/d4e01ee13786674b90a7b9bf92e227f8.jpg"
     },
     {
@@ -76,6 +82,7 @@
         "author": "Joanne Rowling",
         "weight": 0.368,
         "description": "J.K. Rowling is the author of the seven Harry Potter books, which have sold over 500 million copies, been translated into over 80 languages, and made into eight blockbuster films. She also wrote three short series companion volumes for charity, including Fantastic Beasts and Where to Find Them, which later became the inspiration for a new series of films. Harry’s story as a grown-up was later continued in a stage play, Harry Potter and the Cursed Child, which J.K. Rowling wrote with playwright Jack Thorne and director John Tiffany.",
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/d687933acd11e10f27ab3628b98e3710.jpg"
     },
     {
@@ -87,6 +94,7 @@
         "author": "Brian Tracy",
         "weight": 0.261,
         "description": "Most people think success comes from good luck or enormous talent, but many successful people achieve their accomplishments in a simpler way: through self-discipline. No Excuses! shows you how you can achieve success in all three major areas of your life, including your personal goals, business and money goals, and overall happiness.",
+        "isMarked": false,
         "url": "https://s1.hostingkartinok.com/uploads/images/2022/03/4cc16083c85288ee07039ca998dabac5.jpg"
     }
 ]
