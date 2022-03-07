@@ -14,7 +14,6 @@ function App() {
                 <Container>
                     <Routes>
                         <Route path="/" element={<HomeView />} />
-                        <Route path="/delete" element={<HomeView />} />
                         <Route exact path="/add" element={<AddProductView />} />
                         <Route path="*" element={<ErrorView />} />
                     </Routes>

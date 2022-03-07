@@ -22,13 +22,11 @@ function HomeView() {
     useEffect(() => {
         dispatch(resetAllToggles());
         setProducts([...getItems]);
-        console.log("Данные обновились");
     }, [onClickHandler]);
 
     const handleRemove = () => {
         dispatch(removeProducts(false));
         setOnClickHandler(false);
-        console.log("продукты удалены");
     };
 
     const handleChange = useCallback(e => {
@@ -36,8 +34,6 @@ function HomeView() {
         dispatch(onToggleToRemove({ id, checked }));
         setProducts([...getItems]);
     });
-
-    console.log(products);
 
     return (
         <>

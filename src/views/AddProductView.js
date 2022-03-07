@@ -17,11 +17,14 @@ function AddProductView() {
     const navigate = useNavigate();
 
     const [inputValues, setInputValues] = useState({ ...initialState });
-    // useEffect(() => {
-    //     if (localStorage.getItem("inputs")) {
-    //         JSON.parse(localStorage.getItem("inputs"));
-    //     }
-    // }, []);
+    useEffect(() => {
+        if (localStorage.getItem("inputs")) {
+            const savedLocalStorageData = JSON.parse(
+                localStorage.getItem("inputs"),
+            );
+            setInputValues({ ...savedLocalStorageData });
+        }
+    }, []);
     const handleChange = useCallback(e => {
         const { value, name } = e.target;
         setInputValues({ ...inputValues, [name]: value });
@@ -93,7 +96,7 @@ function AddProductView() {
                                 name="sku"
                                 onChange={handleChange}
                                 id="input-use-effect-hook"
-                                // value={inputValues.sku}
+                                value={inputValues.sku}
                             />
                             <input
                                 required
@@ -101,7 +104,7 @@ function AddProductView() {
                                 name="name"
                                 onChange={handleChange}
                                 id="input-use-effect-hook"
-                                // value={inputValues.sku}
+                                value={inputValues.name}
                             />
                             <input
                                 required
@@ -109,13 +112,14 @@ function AddProductView() {
                                 name="price"
                                 onChange={handleChange}
                                 id="input-use-effect-hook"
-                                // value={inputValues.sku}
+                                value={inputValues.price}
                             />
                             <select
                                 className="select-input"
                                 name="type"
                                 onChange={handleChange}
                                 id="input-use-effect-hook"
+                                value={inputValues.type}
                             >
                                 <option>{furniture}</option>
                                 <option>{dvd}</option>
@@ -128,13 +132,23 @@ function AddProductView() {
                             {inputValues.type === furniture && (
                                 <CategoryFurnitureInputs
                                     onChange={handleChange}
+                                    widthValue={inputValues.width}
+                                    heightValue={inputValues.height}
+                                    depthValue={inputValues.depth}
                                 />
                             )}
                             {inputValues.type === dvd && (
-                                <CategoryDVDInputs onChange={handleChange} />
+                                <CategoryDVDInputs
+                                    onChange={handleChange}
+                                    sizeValue={inputValues.size}
+                                />
                             )}
                             {inputValues.type === books && (
-                                <CategoryBooksInputs onChange={handleChange} />
+                                <CategoryBooksInputs
+                                    onChange={handleChange}
+                                    authorValue={inputValues.author}
+                                    weightValue={inputValues.weight}
+                                />
                             )}
                         </div>
                         <div className="description-container">
@@ -146,6 +160,7 @@ function AddProductView() {
                                     name="description"
                                     onChange={handleChange}
                                     id="input-use-effect-hook"
+                                    value={inputValues.description}
                                 />
                             </div>
                         </div>

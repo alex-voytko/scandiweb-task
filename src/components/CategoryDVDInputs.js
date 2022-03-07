@@ -1,4 +1,4 @@
-function CategoryDVDInputs({ onChange }) {
+function CategoryDVDInputs({ onChange, sizeValue }) {
     return (
         <>
             <div className="label-container">
@@ -10,6 +10,7 @@ function CategoryDVDInputs({ onChange }) {
                     name="size"
                     onChange={onChange}
                     id="input-use-effect-hook"
+                    value={sizeValue}
                 />
             </div>
         </>

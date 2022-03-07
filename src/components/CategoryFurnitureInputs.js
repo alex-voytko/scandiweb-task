@@ -1,4 +1,9 @@
-function CategoryFurnitureInputs({ onChange }) {
+function CategoryFurnitureInputs({
+    onChange,
+    widthValue,
+    heightValue,
+    depthValue,
+}) {
     return (
         <>
             <div className="label-container">
@@ -12,18 +17,21 @@ function CategoryFurnitureInputs({ onChange }) {
                     name="width"
                     onChange={onChange}
                     id="input-use-effect-hook"
+                    value={widthValue}
                 />
                 <input
                     type="number"
                     name="height"
                     onChange={onChange}
                     id="input-use-effect-hook"
+                    value={heightValue}
                 />
                 <input
                     type="number"
                     name="depth"
                     onChange={onChange}
                     id="input-use-effect-hook"
+                    value={depthValue}
                 />
             </div>
         </>
