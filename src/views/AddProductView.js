@@ -7,6 +7,7 @@ import CategoryDVDInputs from "../components/CategoryDVDInputs";
 import CategoryBooksInputs from "../components/CategoryBooksInputs";
 import DropFileInput from "../components/DropFileInput";
 import ViewWrapper from "../components/ViewWrapper";
+import Container from "../components/Container";
 import uploadImage from "../api/uploadImage";
 import { v4 as uuidv4 } from "uuid";
 import initialState from "../helpers/initialState";
@@ -80,104 +81,108 @@ function AddProductView() {
                 secondBtnLink="/"
                 secondBtnClick={null}
             />
-            <form className="product-form" onSubmit={handleSubmit}>
-                <div className="block-container">
-                    <div className="required-input-container">
-                        <div className="label-container">
-                            <label htmlFor="sku">SKU</label>
-                            <label htmlFor="name">Name</label>
-                            <label htmlFor="price">Price ($)</label>
-                            <label htmlFor="type">Category</label>
-                        </div>
-                        <div className="input-container">
-                            <input
-                                required
-                                type="text"
-                                name="sku"
-                                onChange={handleChange}
-                                id="input-use-effect-hook"
-                                value={inputValues.sku}
-                            />
-                            <input
-                                required
-                                type="text"
-                                name="name"
-                                onChange={handleChange}
-                                id="input-use-effect-hook"
-                                value={inputValues.name}
-                            />
-                            <input
-                                required
-                                type="number"
-                                name="price"
-                                onChange={handleChange}
-                                id="input-use-effect-hook"
-                                value={inputValues.price}
-                            />
-                            <select
-                                className="select-input"
-                                name="type"
-                                onChange={handleChange}
-                                id="input-use-effect-hook"
-                                value={inputValues.type}
-                            >
-                                <option>{furniture}</option>
-                                <option>{dvd}</option>
-                                <option>{books}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div className="category-container">
-                        <div className="render-category-container">
-                            {inputValues.type === furniture && (
-                                <CategoryFurnitureInputs
-                                    onChange={handleChange}
-                                    widthValue={inputValues.width}
-                                    heightValue={inputValues.height}
-                                    depthValue={inputValues.depth}
-                                />
-                            )}
-                            {inputValues.type === dvd && (
-                                <CategoryDVDInputs
-                                    onChange={handleChange}
-                                    sizeValue={inputValues.size}
-                                />
-                            )}
-                            {inputValues.type === books && (
-                                <CategoryBooksInputs
-                                    onChange={handleChange}
-                                    authorValue={inputValues.author}
-                                    weightValue={inputValues.weight}
-                                />
-                            )}
-                        </div>
-                        <div className="description-container">
+            <Container className="container-wrapper">
+                <form className="product-form" onSubmit={handleSubmit}>
+                    <div className="block-container">
+                        <div className="required-input-container">
                             <div className="label-container">
-                                <label htmlFor="description">Description</label>
+                                <label htmlFor="sku">SKU</label>
+                                <label htmlFor="name">Name</label>
+                                <label htmlFor="price">Price ($)</label>
+                                <label htmlFor="type">Category</label>
                             </div>
                             <div className="input-container">
-                                <textarea
-                                    name="description"
+                                <input
+                                    required
+                                    type="text"
+                                    name="sku"
                                     onChange={handleChange}
                                     id="input-use-effect-hook"
-                                    value={inputValues.description}
+                                    value={inputValues.sku}
                                 />
+                                <input
+                                    required
+                                    type="text"
+                                    name="name"
+                                    onChange={handleChange}
+                                    id="input-use-effect-hook"
+                                    value={inputValues.name}
+                                />
+                                <input
+                                    required
+                                    type="number"
+                                    name="price"
+                                    onChange={handleChange}
+                                    id="input-use-effect-hook"
+                                    value={inputValues.price}
+                                />
+                                <select
+                                    className="select-input"
+                                    name="type"
+                                    onChange={handleChange}
+                                    id="input-use-effect-hook"
+                                    value={inputValues.type}
+                                >
+                                    <option>{furniture}</option>
+                                    <option>{dvd}</option>
+                                    <option>{books}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div className="category-container">
+                            <div className="render-category-container">
+                                {inputValues.type === furniture && (
+                                    <CategoryFurnitureInputs
+                                        onChange={handleChange}
+                                        widthValue={inputValues.width}
+                                        heightValue={inputValues.height}
+                                        depthValue={inputValues.depth}
+                                    />
+                                )}
+                                {inputValues.type === dvd && (
+                                    <CategoryDVDInputs
+                                        onChange={handleChange}
+                                        sizeValue={inputValues.size}
+                                    />
+                                )}
+                                {inputValues.type === books && (
+                                    <CategoryBooksInputs
+                                        onChange={handleChange}
+                                        authorValue={inputValues.author}
+                                        weightValue={inputValues.weight}
+                                    />
+                                )}
+                            </div>
+                            <div className="description-container">
+                                <div className="label-container">
+                                    <label htmlFor="description">
+                                        Description
+                                    </label>
+                                </div>
+                                <div className="input-container">
+                                    <textarea
+                                        name="description"
+                                        onChange={handleChange}
+                                        id="input-use-effect-hook"
+                                        value={inputValues.description}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="second-block-container">
-                    <DropFileInput
-                        url={inputValues.url}
-                        drag={drag}
-                        onDragStart={e => dragStartHandler(e)}
-                        onDragLeave={e => dragLeaveHandler(e)}
-                        onDragOver={e => dragStartHandler(e)}
-                        onDrop={e => onDropHandler(e)}
-                        onChangeImg={onChangeImg}
-                    />
-                </div>
-            </form>
+                    <div className="second-block-container">
+                        <DropFileInput
+                            url={inputValues.url}
+                            drag={drag}
+                            onDragStart={e => dragStartHandler(e)}
+                            onDragLeave={e => dragLeaveHandler(e)}
+                            onDragOver={e => dragStartHandler(e)}
+                            onDrop={e => onDropHandler(e)}
+                            onChangeImg={onChangeImg}
+                        />
+                    </div>
+                </form>
+            </Container>
         </>
     );
 }

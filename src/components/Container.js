@@ -1,5 +1,5 @@
-function Container({ children }) {
-  return <div className='app-container'>{children}</div>;
+function Container({ children, className }) {
+    return <div className={className}>{children}</div>;
 }
 
 export default Container;

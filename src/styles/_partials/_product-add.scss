@@ -1,102 +1,233 @@
-@import "./vars";
-
-.product-form {
-    display: flex;
-    height: inherit;
-    label {
-        display: block;
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
-    input {
-        @include standartInput(24px);
-        margin-bottom: 20px;
-        &:focus {
-            border: 2px solid $accentColorAccept;
-        }
-    }
-    .label-container {
-        width: 88px;
-        margin-right: 10px;
-    }
-    .block-container {
-        .required-input-container {
-            display: flex;
-            margin-right: 70px;
-        }
-        .select-input {
-            @include standartInput(24px);
-            margin-bottom: 20px;
-        }
-        .category-container {
-            .render-category-container {
-                display: flex;
-            }
-        }
-        .description-container {
-            display: flex;
-            textarea {
-                @include standartInput(112px);
-                &:focus {
-                    border: 2px solid $accentColorAccept;
-                }
-            }
-        }
-    }
-    .second-block-container {
+@media screen and(min-width: $mobile) {
+    .product-form {
         width: 100%;
         height: inherit;
-        .drop-files-container {
+        label {
+            width: fit-content;
+            height: 24px;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .input-container {
+            width: 100%;
+        }
+        input {
+            @include standartInput(100%, 24px);
+            margin-bottom: 20px;
+            padding-left: 8px;
+            &:focus {
+                border: 2px solid $accentColorAccept;
+            }
+        }
+        .label-container {
+            width: 78px;
+            margin-right: 10px;
+        }
+        .block-container {
             width: inherit;
-            height: 100%;
-            display: flex;
-
-            .drop-area {
+            .required-input-container {
                 width: inherit;
-                height: inherit;
-                border: 1px dashed rgba(53, 53, 53, 0.3);
-                border-radius: 3px;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                &.on-drop {
-                    border: 3px dashed $accentColorAccept;
+            }
+            .select-input {
+                @include standartInput(100%, 24px);
+                margin-bottom: 20px;
+            }
+            .category-container {
+                margin-bottom: 20px;
+                .render-category-container {
+                    display: flex;
                 }
             }
-            .input-container {
-                width: inherit;
-                height: inherit;
-                .hint {
-                    font-size: 25px;
-                    color: rgba(53, 53, 53, 0.3);
-                    &.on-drop {
-                        color: $accentColorAccept;
+            .description-container {
+                width: 100%;
+                display: flex;
+                textarea {
+                    @include standartInput(100%, 112px);
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    &:focus {
+                        border: 2px solid $accentColorAccept;
                     }
                 }
             }
         }
-        .add-img-text {
-            color: $accentColorAccept;
-            margin-right: 30px;
-            &::before {
-                display: inline-block;
-                content: "";
-                width: 20px;
-                height: 20px;
-                background-image: url("../../images/checkmark.svg");
-                background-size: 20px 20px;
-                background-position: top 10%;
-                background-repeat: no-repeat;
+        .second-block-container {
+            width: 100%;
+            height: inherit;
+            .drop-files-container {
+                display: flex;
+
+                .drop-area {
+                    width: inherit;
+                    height: 112px;
+                    border: 1px dashed rgba(53, 53, 53, 0.3);
+                    border-radius: 3px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &.on-drop {
+                        border: 3px dashed $accentColorAccept;
+                    }
+                }
+                .input-container {
+                    width: 100%;
+                    height: inherit;
+                    .hint {
+                        font-size: 20px;
+                        color: rgba(53, 53, 53, 0.3);
+                        &.on-drop {
+                            color: $accentColorAccept;
+                        }
+                    }
+                }
+            }
+            .add-img-text {
                 color: $accentColorAccept;
-                margin-right: 5px;
+                margin-right: 30px;
+                &::before {
+                    display: inline-block;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("../../images/checkmark.svg");
+                    background-size: 20px 20px;
+                    background-position: top 10%;
+                    background-repeat: no-repeat;
+                    color: $accentColorAccept;
+                    margin-right: 5px;
+                }
+            }
+            .add-img-btn {
+                @include btnStandart(10px);
+                height: fit-content;
+                &:hover {
+                    @include standartBtnShadow(54, 110, 252);
+                    color: $accentColorAccept;
+                }
             }
         }
-        .add-img-btn {
-            @extend %btnStandart;
-            height: fit-content;
-            &:hover {
-                @include standartBtnShadow(54, 110, 252);
-                color: $accentColorAccept;
+    }
+}
+@media screen and(min-width: $mobileMax) {
+    .product-form {
+        .label-container {
+            width: 90px;
+        }
+        label {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and(min-width: $tablet) {
+    .product-form {
+        display: flex;
+        height: inherit;
+        .drop-files-container {
+            display: block;
+        }
+        .description-container {
+            margin-bottom: 0;
+        }
+        .second-block-container {
+            width: 100%;
+            height: inherit;
+            margin-left: 20px;
+            .drop-files-container {
+                width: inherit;
+                height: 100%;
+                display: flex;
+                .input-container {
+                    width: inherit;
+                    height: inherit;
+                }
+                .label-container {
+                    height: fit-content;
+                    display: block;
+                }
+                .drop-area {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
+        .block-container {
+            .label-container {
+                width: 100px;
+            }
+            .category-container {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and(min-width: $tabletMax) {
+    .product-form {
+        .label-container {
+            width: 110px;
+        }
+        .block-container {
+            width: 425px;
+            .input-container {
+                width: 330px;
+            }
+            input {
+                height: 26px;
+                width: 330px;
+            }
+            .select-input {
+                width: 330px;
+                height: 26px;
+            }
+            .description-container {
+                textarea {
+                    width: 330px;
+                }
+            }
+        }
+        label {
+            height: 26px;
+            font-size: 16px;
+        }
+        .second-block-container {
+            .label-container {
+                width: 90px;
+            }
+        }
+    }
+}
+@media screen and(min-width: $desktop) {
+    .product-form {
+        .block-container {
+            width: 500px;
+            .input-container {
+                width: fit-content;
+            }
+            input {
+                height: 33px;
+                width: 350px;
+                font-size: 15px;
+            }
+            .select-input {
+                width: 350px;
+                height: 33px;
+                font-size: 15px;
+            }
+            .description-container {
+                textarea {
+                    width: 350px;
+                    font-size: 15px;
+                }
+            }
+        }
+        label {
+            height: 33px;
+            font-size: 18px;
+        }
+        .second-block-container {
+            .label-container {
+                width: 100px;
             }
         }
     }

@@ -12,7 +12,7 @@ function App() {
         <>
             <BrowserRouter>
                 <AppBar />
-                <Container>
+                <Container className={"app-container"}>
                     <Routes>
                         <Route path="/" element={<HomeView />} />
                         <Route path="/add" element={<AddProductView />} />

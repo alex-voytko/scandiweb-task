@@ -31,6 +31,9 @@ const productsSlice = createSlice({
         removeProducts(state, { payload }) {
             state.items = state.items.filter(item => item.isMarked === payload);
         },
+        removeCurrentProduct(state, { payload }) {
+            state.items = state.items.filter(item => item.id !== payload);
+        },
     },
 });
 
@@ -40,6 +43,7 @@ export const {
     onToggleToRemove,
     resetAllToggles,
     removeProducts,
+    removeCurrentProduct,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

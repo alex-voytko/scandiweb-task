@@ -1,8 +1,9 @@
+# scandiweb-task
+
 Active tasks:
 
--   Create ProductViewDetails <B priority>
--   Loader integration <C priority>
 -   Adaptive/Responsive design <C priority>
+-   Loader integration <C priority>
 -   Provide smooth animation <C priority>
 
 Additional tasks:
@@ -17,3 +18,4 @@ Completed tasks:
 -   Implement Redux-library <A priority>
 -   Implement mass delete <A priority>
 -   LocalStorage-saving <B priority>
+-   Create ProductViewDetails <B priority>

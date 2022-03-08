@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ViewWrapper from "../components/ViewWrapper";
+import Container from "../components/Container";
 import sliceTitle from "../helpers/sliceTitle";
 import {
     onToggleToRemove,
@@ -44,14 +45,12 @@ function HomeView() {
                 firstBtnType="button"
                 firstBtnLink={!onClickHandler ? "/add" : "#"}
                 firstBtnClick={!onClickHandler ? null : handleClick}
-                secondBtnName={
-                    !onClickHandler ? "mass delete" : "delete selected products"
-                }
+                secondBtnName={!onClickHandler ? "mass delete" : "confirm"}
                 secondBtnType="button"
                 secondBtnLink="#"
                 secondBtnClick={!onClickHandler ? handleClick : handleRemove}
             />
-            <>
+            <Container className="container-wrapper">
                 <ul className="product-list">
                     {products.map(product => (
                         <li className="product-list-item" key={product.id}>
@@ -89,7 +88,7 @@ function HomeView() {
                         </li>
                     ))}
                 </ul>
-            </>
+            </Container>
         </>
     );
 }

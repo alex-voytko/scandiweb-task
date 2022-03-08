@@ -1,3 +1,39 @@
-.app-container {
-    padding: 80px 100px;
+@media screen and (min-width: $mobile) {
+    .app-container {
+        padding: 55px 15px;
+    }
+    .container-wrapper {
+        width: 290px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: $mobileMax) {
+    .app-container {
+        padding: 70px 25px;
+    }
+    .container-wrapper {
+        width: 510px;
+    }
+}
+@media screen and(min-width: $tablet) {
+    .container-wrapper {
+        width: 750px;
+    }
+}
+@media screen and(min-width: $tabletMax) {
+    .app-container {
+        padding: 70px 50px;
+    }
+    .container-wrapper {
+        width: 890px;
+    }
+}
+@media screen and (min-width: $desktop) {
+    .app-container {
+        padding: 85px 76px;
+    }
+    .container-wrapper {
+        width: 1208px;
+    }
 }
