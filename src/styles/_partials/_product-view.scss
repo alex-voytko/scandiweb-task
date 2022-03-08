@@ -1,0 +1,41 @@
+@import "./vars";
+
+.product-view-container {
+    display: flex;
+    .img-container {
+        width: 50%;
+        height: 100%;
+        img {
+            width: 90%;
+        }
+    }
+    .content-container {
+        width: 50%;
+        h3 {
+            margin-bottom: 5px;
+        }
+        .sku-render {
+            color: #bfbfbf;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        p {
+            color: $accentColorAccept;
+            font-weight: 600;
+            margin-bottom: 10px;
+            span {
+                color: $titleColor;
+                font-weight: 400;
+            }
+            &:nth-last-child(1) {
+                margin-bottom: 20px;
+            }
+        }
+        .description {
+            // margin-bottom: 10px;
+            span {
+                display: inline-block;
+            }
+        }
+    }
+}

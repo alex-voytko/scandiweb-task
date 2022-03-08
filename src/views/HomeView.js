@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import ViewWrapper from "../components/ViewWrapper";
 import sliceTitle from "../helpers/sliceTitle";
 import {
@@ -67,22 +68,24 @@ function HomeView() {
                                     />
                                 </div>
                             )}
-                            <div className="img-container">
-                                <div className="img-fill"></div>
-                                <p>{product.sku}</p>
-                                <img src={product.url} alt={product.name} />
-                            </div>
-                            <div className="content-container">
-                                <h3 className="title">
-                                    {sliceTitle(product.name)}
-                                </h3>
-                                <p>
-                                    Category: <span>{product.type}</span>
-                                </p>
-                                <p>
-                                    Price: <span>{"$" + product.price}</span>
-                                </p>
-                            </div>
+                            <Link to={`product/${product.id}`}>
+                                <div className="img-container">
+                                    <div className="img-fill"></div>
+                                    <p>{product.sku}</p>
+                                    <img src={product.url} alt={product.name} />
+                                </div>
+                                <div className="content-container">
+                                    <h3 className="title">
+                                        {sliceTitle(product.name)}
+                                    </h3>
+                                    <p>
+                                        <span>{product.type}</span>
+                                    </p>
+                                    <p>
+                                        <span>{"$" + product.price}</span>
+                                    </p>
+                                </div>
+                            </Link>
                         </li>
                     ))}
                 </ul>

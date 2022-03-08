@@ -1,17 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import productList from "../../db.json";
+import initialProductList from "../../db.json";
 
 const productsSlice = createSlice({
     name: "products",
     initialState: {
-        items: [...productList],
+        items: [...initialProductList],
+        selectedProduct: {},
     },
     reducers: {
-        fetchProducts(state) {
-            return state.items;
+        selectProduct(state, { payload }) {
+            state.selectedProduct = state.items.find(
+                item => item.id === payload,
+            );
         },
         addProduct(state, action) {
             state.items = [action.payload, ...state.items];
+        },
+        onToggleToRemove(state, { payload }) {
+            console.log(payload);
+            const i = state.items.findIndex(item => item.id === payload.id);
+            state.items[i].isMarked = payload.checked;
         },
         resetAllToggles(state) {
             const newArr = [];
@@ -20,11 +28,6 @@ const productsSlice = createSlice({
             });
             state.items = newArr;
         },
-        onToggleToRemove(state, { payload }) {
-            console.log(payload);
-            const i = state.items.findIndex(item => item.id === payload.id);
-            state.items[i].isMarked = payload.checked;
-        },
         removeProducts(state, { payload }) {
             state.items = state.items.filter(item => item.isMarked === payload);
         },
@@ -32,11 +35,11 @@ const productsSlice = createSlice({
 });
 
 export const {
+    selectProduct,
     addProduct,
-    removeProducts,
     onToggleToRemove,
     resetAllToggles,
-    fetchProducts,
+    removeProducts,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

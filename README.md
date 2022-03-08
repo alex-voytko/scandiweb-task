@@ -1,18 +1,19 @@
-Цели:
+Active tasks:
 
--   Открытие страницы с продуктом B
--   Интеграция лоадера C
--   Адаптивная верстка C
--   Плавная анимация - Посмотреть видео по анимации на Реакте C
+-   Create ProductViewDetails <B priority>
+-   Loader integration <C priority>
+-   Adaptive/Responsive design <C priority>
+-   Provide smooth animation <C priority>
 
-дополнительниые задачи:
+Additional tasks:
 
--   стилизовать чекбоксы
--   рефакторить код
+-   checkboxes style
+-   code refactor
+-   light/dark theme switcher
 
 Completed tasks:
 
-<!-- -   Upload Image <A> -->
-<!-- -   implement Redux-library <A> -->
-<!-- -   implement mass delete <A> -->
-<!-- -   localStorage-saving <B> -->
+-   Upload Image <A priority>
+-   Implement Redux-library <A priority>
+-   Implement mass delete <A priority>
+-   LocalStorage-saving <B priority>
