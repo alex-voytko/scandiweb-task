@@ -8,9 +8,7 @@ import CategoryBooksInputs from "../components/CategoryBooksInputs";
 import DropFileInput from "../components/DropFileInput";
 import ViewWrapper from "../components/ViewWrapper";
 import Container from "../components/Container";
-import CreateLabelField from "../components/CreateLabelField";
-import CreateInputField from "../components/CreateInputField";
-import CreateSelectField from "../components/CreateSelectField";
+import RequiredInputs from "../components/RequiredInputs";
 import uploadImage from "../api/uploadImage";
 import { v4 as uuidv4 } from "uuid";
 import initialState from "../helpers/initialState";
@@ -85,34 +83,13 @@ function AddProductView() {
       <Container className="container-wrapper">
         <form className="product-form" onSubmit={handleSubmit}>
           <div className="block-container">
-            <div className="required-input-container">
-              <div className="label-container">
-                <CreateLabelField
-                  array={[
-                    ["sku", "SKU"],
-                    ["name", "Name"],
-                    ["price", "Price $"],
-                    ["type", "Category"],
-                  ]}
-                />
-              </div>
-              <div className="input-container">
-                <CreateInputField
-                  array={[
-                    [true, "text", "sku", inputValues.sku],
-                    [true, "text", "name", inputValues.name],
-                    [true, "number", "price", inputValues.price],
-                  ]}
-                  handleChange={handleChange}
-                />
-                <CreateSelectField
-                  handleChange={handleChange}
-                  name="type"
-                  value={inputValues.type}
-                  arrayOptions={[furniture, dvd, books]}
-                />
-              </div>
-            </div>
+            <RequiredInputs
+              handleChange={handleChange}
+              sku={inputValues.sku}
+              name={inputValues.name}
+              type={inputValues.type}
+              price={inputValues.price}
+            />
             <div className="category-container">
               <div className="render-category-container">
                 {inputValues.type === furniture && (
