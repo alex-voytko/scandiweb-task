@@ -8,7 +8,6 @@ Active tasks:
 Additional tasks:
 
 - checkboxes style
-- code refactor
 - light/dark theme switcher
 
 Completed tasks:
@@ -19,3 +18,5 @@ Completed tasks:
 - LocalStorage-saving <B priority>
 - Create ProductViewDetails <B priority>
 - Adaptive/Responsive design <C priority>
+
+actual commit: "3.5.1"

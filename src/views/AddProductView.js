@@ -62,6 +62,7 @@ function AddProductView() {
       const updatedState = { ...inputValues, id: uuidv4() };
       dispatch(addProduct(updatedState));
       setInputValues({ ...initialState });
+      localStorage.removeItem("inputs");
       return navigate("/");
     }
     alert("SKU-, Name- and Price- inputs should not be empty!");
