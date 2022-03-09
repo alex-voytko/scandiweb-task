@@ -1,141 +1,141 @@
 @media screen and(min-width: $mobile) {
-    .product-list {
-        &-item {
-            position: relative;
-            width: 230px;
-            height: 290px;
-            outline: $border;
-            margin-bottom: 40px;
-            border-radius: 3px;
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-                0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-            transition: 2s;
-            &:hover {
-                cursor: pointer;
-                @include standartItemShadow(71, 176, 247);
-                .img-container img {
-                    opacity: 1;
-                }
-            }
-            .img-container {
-                width: inherit;
-                position: relative;
-                z-index: 2;
-                background-size: cover;
-                padding-left: 15px;
-                padding-right: 15px;
-                p {
-                    position: absolute;
-                    z-index: 10;
-                    font-size: 10px;
-                    padding: 3px;
-                    background-color: $accentColorAccept;
-                    color: white;
-                    border-bottom-left-radius: 3px;
-                    border-bottom-right-radius: 3px;
-                }
-                img {
-                    display: block;
-                    height: 200px;
-                    object-fit: contain;
-                    object-position: center;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding-top: 15px;
-                    opacity: 0.7;
-                    transition: 2s linear;
-                }
-            }
-            .content-container {
-                padding: 15px;
-                .title {
-                    font-size: 15px;
-                }
-                p {
-                    font-size: 13px;
-                    span {
-                        letter-spacing: 1px;
-                        color: $accentColorAccept;
-                        font-weight: 600;
-                    }
-                }
-            }
-            .delete-checkbox-container {
-                display: inline-block;
-                position: absolute;
-                width: 26px;
-                height: 26px;
-                right: 5px;
-                top: 5px;
-                z-index: 20;
-                .delete-checkbox {
-                    display: block;
-                    width: 26px;
-                    height: 26px;
-                    margin: 0;
-                }
-            }
+  .product-list {
+    &-item {
+      position: relative;
+      width: 230px;
+      height: 290px;
+      outline: $border;
+      margin-bottom: 40px;
+      border-radius: 3px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      transition: 2s;
+      &:hover {
+        cursor: pointer;
+        @include standartItemShadow(71, 176, 247);
+        .img-container img {
+          opacity: 1;
         }
+      }
+      .img-container {
+        width: inherit;
+        position: relative;
+        z-index: 2;
+        background-size: cover;
+        padding-left: 15px;
+        padding-right: 15px;
+        p {
+          position: absolute;
+          z-index: 10;
+          font-size: 10px;
+          padding: 3px;
+          background-color: $accentColorAccept;
+          color: white;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        img {
+          display: block;
+          height: 200px;
+          object-fit: contain;
+          object-position: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 15px;
+          opacity: 0.7;
+          transition: 2s linear;
+        }
+      }
+      .content-container {
+        padding: 15px;
+        .title {
+          font-size: 15px;
+        }
+        p {
+          font-size: 13px;
+          span {
+            letter-spacing: 1px;
+            color: $accentColorAccept;
+            font-weight: 600;
+          }
+        }
+      }
+      .delete-checkbox-container {
+        display: inline-block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        right: 5px;
+        top: 5px;
+        z-index: 20;
+        .delete-checkbox {
+          display: block;
+          width: 26px;
+          height: 26px;
+          margin: 0;
+        }
+      }
     }
+  }
 }
 @media screen and(min-width: $mobileMax) {
-    .product-list-item {
-        &:nth-child(odd) {
-            margin-right: 50px;
-        }
+  .product-list-item {
+    &:nth-child(odd) {
+      margin-right: 50px;
     }
+  }
 }
 @media screen and(min-width: $tablet) {
-    .product-list-item {
-        &:nth-child(2n + 1) {
-            margin-right: 30px;
-        }
-        &:nth-child(2n) {
-            margin-right: 30px;
-        }
-        &:nth-child(3n + 3) {
-            margin-right: 0;
-        }
+  .product-list-item {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
     }
+    &:nth-child(2n) {
+      margin-right: 30px;
+    }
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+  }
 }
 @media screen and(min-width: $tabletMax) {
-    .product-list-item {
-        width: 260px;
-        &:nth-child(2n + 1) {
-            margin-right: 55px;
-        }
-        &:nth-child(2n) {
-            margin-right: 55px;
-        }
-        &:nth-child(3n + 3) {
-            margin-right: 0;
-        }
+  .product-list-item {
+    width: 260px;
+    &:nth-child(2n + 1) {
+      margin-right: 55px;
     }
+    &:nth-child(2n) {
+      margin-right: 55px;
+    }
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+  }
 }
 @media screen and(min-width: $desktop) {
-    .product-list-item {
-        height: 300px;
-        &:nth-child(2n + 1) {
-            margin-right: 56px;
-        }
-        &:nth-child(2n) {
-            margin-right: 56px;
-        }
-        &:nth-child(4n + 4) {
-            margin-right: 0;
-        }
-        .img-container {
-            p {
-                padding: 3px;
-            }
-        }
-        .content-container {
-            .title {
-                font-size: 17px;
-            }
-            p {
-                font-size: 15px;
-            }
-        }
+  .product-list-item {
+    height: 300px;
+    &:nth-child(2n + 1) {
+      margin-right: 56px;
     }
+    &:nth-child(2n) {
+      margin-right: 56px;
+    }
+    &:nth-child(4n + 4) {
+      margin-right: 0;
+    }
+    .img-container {
+      p {
+        padding: 3px;
+      }
+    }
+    .content-container {
+      .title {
+        font-size: 17px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
 }

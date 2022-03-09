@@ -1,65 +1,65 @@
 @import "./vars";
 
 @media screen and (min-width: $mobile) {
-    .view-wrapper {
-        display: flex;
-        padding: 10px 15px;
-        justify-content: space-between;
-        border-bottom: $border;
-        margin-bottom: 30px;
-        h2 {
-            font-size: 20px;
-        }
-        .btn-container {
-            display: flex;
-            .link {
-                display: block;
-                .btn {
-                    @include btnStandart(5px);
-                    font-size: 14px;
-                    margin-left: 10px;
-                    &.blue:hover {
-                        @include standartBtnShadow(54, 110, 252);
-                        color: $accentColorAccept;
-                    }
-                    &.red:hover {
-                        @include standartBtnShadow(224, 79, 78);
-                        color: $accentColorCancel;
-                    }
-                }
-            }
-        }
+  .view-wrapper {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    border-bottom: $border;
+    margin-bottom: 30px;
+    h2 {
+      font-size: 20px;
     }
+    .btn-container {
+      display: flex;
+      .link {
+        display: block;
+        .btn {
+          @include btnStandart(5px);
+          font-size: 14px;
+          margin-left: 10px;
+          &.blue:hover {
+            @include standartBtnShadow(54, 110, 252);
+            color: $accentColorAccept;
+          }
+          &.red:hover {
+            @include standartBtnShadow(224, 79, 78);
+            color: $accentColorCancel;
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: $mobileMax) {
-    .view-wrapper {
-        h2 {
-            font-size: 24px;
-        }
-        .btn-container {
-            .link {
-                .btn {
-                    @include btnStandart(10px);
-                    font-size: 14px;
-                    margin-left: 20px;
-                }
-            }
-        }
+  .view-wrapper {
+    h2 {
+      font-size: 24px;
     }
+    .btn-container {
+      .link {
+        .btn {
+          @include btnStandart(10px);
+          font-size: 14px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: $desktop) {
-    .view-wrapper {
-        margin-bottom: 40px;
-        h2 {
-            font-size: 28px;
-        }
-        .btn-container {
-            .link {
-                .btn {
-                    font-size: 17px;
-                    margin-left: 25px;
-                }
-            }
-        }
+  .view-wrapper {
+    margin-bottom: 40px;
+    h2 {
+      font-size: 28px;
     }
+    .btn-container {
+      .link {
+        .btn {
+          font-size: 17px;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
 }

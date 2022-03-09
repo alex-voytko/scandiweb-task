@@ -1,13 +1,13 @@
 @media screen and (min-width: $mobile) {
-    .product-list {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .product-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media screen and(min-width: $mobileMax) {
-    .product-list {
-        justify-content: start;
-    }
+  .product-list {
+    justify-content: start;
+  }
 }

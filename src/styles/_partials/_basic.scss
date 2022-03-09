@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body,
 h1,
@@ -19,59 +19,59 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0;
+  margin: 0;
 }
 h2,
 h3,
 a,
 button,
 label {
-    color: $titleColor;
+  color: $titleColor;
 }
 body {
-    font-family: "PT Sans", sans-serif;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    background-color: $backgroundColor;
+  font-family: "PT Sans", sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: $backgroundColor;
 }
 ul,
 ol {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 button {
-    border: none;
-    &:hover {
-        cursor: pointer;
-    }
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 li {
-    list-style: none;
+  list-style: none;
 }
 input,
 textarea,
 select {
-    -webkit-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
-    -moz-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
-    box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
-    &:focus {
-        outline: none;
-    }
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+  box-shadow: 1px 1px 3px 1px rgba(184, 184, 184, 0.19);
+  &:focus {
+    outline: none;
+  }
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
