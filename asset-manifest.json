@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/scandiweb-task/static/css/main.d7897f11.css",
+    "main.js": "/scandiweb-task/static/js/main.ad341396.js",
+    "static/media/logo.svg": "/scandiweb-task/static/media/logo.d6015e50a74bae8531d4.svg",
+    "index.html": "/scandiweb-task/index.html",
+    "static/media/checkmark.svg": "/scandiweb-task/static/media/checkmark.d3448dd12f5c1b86610c.svg",
+    "main.d7897f11.css.map": "/scandiweb-task/static/css/main.d7897f11.css.map",
+    "main.ad341396.js.map": "/scandiweb-task/static/js/main.ad341396.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7897f11.css",
+    "static/js/main.ad341396.js"
+  ]
+}
