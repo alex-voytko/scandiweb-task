@@ -2,7 +2,6 @@
 
 Active tasks:
 
--   Adaptive/Responsive design <C priority>
 -   Loader integration <C priority>
 -   Provide smooth animation <C priority>
 
@@ -19,3 +18,4 @@ Completed tasks:
 -   Implement mass delete <A priority>
 -   LocalStorage-saving <B priority>
 -   Create ProductViewDetails <B priority>
+-   Adaptive/Responsive design <C priority>
